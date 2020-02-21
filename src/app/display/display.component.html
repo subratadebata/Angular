@@ -1,0 +1,66 @@
+<!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+
+
+
+
+<div class="container">
+    <div class="row">
+        <form [formGroup]='displayForm' (ngSubmit)="onSubmit()" role="form">
+            <div>
+                <h5 style="color:blue;">Find Trip</h5>
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Trip Number</label>
+                <input type="text" class="form-control" formControlName="tripnumber" id="tripnumber" required
+                    placeholder=" Name ">
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Operating Date</label>
+                <input type="date" class="form-control" formControlName="operatingdate" id="operatingdate"
+                    placeholder="Operating Date">
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Time Format</label>
+                <input type="text" class="form-control" formControlName="timeformat" id="timeformat"
+                    placeholder="Time Format">
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Flight Number</label>
+                <input type="text" class="form-control" formControlName="flightnumber" id="flightnumber"
+                    placeholder="Flight Number">
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">From Date</label>
+                <input type="date" class="form-control" formControlName="fromdate" id="fromdate"
+                    placeholder="From Date">
+            </div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">To Date</label>
+                <input type="date" class="form-control" formControlName="todate" id="todate" placeholder="To Date">
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4">
+                <label for="exampleInputEmail1">Crew ID</label>
+                <input type="text" class="form-control" formControlName="crewid" id="crewid" placeholder="Crew ID">
+            </div>
+            <div class="clearfix"></div>
+            <div class="form-group col-xs-10 col-sm-4 col-md-4 col-lg-4"></div>
+            <button class="btn info" type="submit" [disabled]="!displayForm.valid"> Retrieve </button><br><br />
+            <!--  <button (click)="printAllDisplayedRows()">Print All Displayed Rows</button>
+        <button type="button" (click)="downloadPDF()">Download Pdf</button> -->
+            <!-- <div>
+          <ag-grid-angular style="width: 1200px; height: 300px;" class="ag-theme-balham" [rowData]="rowData"
+            [columnDefs]="columnDefs" (gridReady)="onGridReady($event)">
+          </ag-grid-angular>
+        </div> -->
+        </form>
+    </div>
+    <!-- <router-outlet>
+    </router-outlet> -->
+
+    <button mat-raised-button (click)="openDialog()">
+
+        Pick one
+    </button>
+</div>
